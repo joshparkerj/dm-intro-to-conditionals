@@ -1,4 +1,7 @@
 <script>
+    function truthyOrFalsy(val){
+        console.log(val ? 'The value is truthy': 'The value is falsy');
+    }
     var employed = (hasExperience,amountOfExperience) => {
         return hasExperience && amountOfExperience > 5;
     };
@@ -72,4 +75,25 @@
     console.log(employed(true,0)); // how does that make sense?
     console.log(employed(false,400)); // again... what?
     console.log(employed(true,6)); // at last! a worker
+    truthyOrFalsy(0); // falsy, right?
+    truthyOrFalsy([]); // truthy?
+    truthyOrFalsy(''); // falsy?
+    truthyOrFalsy([false]); // truthy? (are arrays truthy always?)
+    // interesting.
+    // here's some copypasta from https://lms.devmountain.com/courses/4/pages/intro-to-truthy-and-falsy?module_item_id=453
+    console.log('begin copypasta:');
+    truthyOrFalsy('');
+    // logs 'The value is falsy';
+    truthyOrFalsy('DevMountain');
+    // logs 'The value is truthy';
+    truthyOrFalsy([]);
+    // logs 'The value is truthy';
+    truthyOrFalsy(0);
+    // logs 'The value is falsy';
+    truthyOrFalsy(-1);
+    // logs 'The value is truthy';
+    truthyOrFalsy(null);
+    // logs 'The value is falsy';
+    truthyOrFalsy(NaN);
+    // logs 'The value is falsy';
 </script>
