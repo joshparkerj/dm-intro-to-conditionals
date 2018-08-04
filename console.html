@@ -1,4 +1,24 @@
 <script>
+    function favHero(hero){
+        if (hero.toUpperCase() === 'IRON MAN'){
+            return hero + "? Hey, mine too!"; //rofl
+        }else if (hero.toUpperCase() === 'WOLVERINE'){
+            return hero + "? we can't be friends anymore";
+        }else if (hero.toUpperCase() === 'GREEN LANTERN') {
+            return (hero + "? you have impeccable taste, " + 
+                    'although iron man is still better');
+        }else if (hero.toUpperCase() === 'BIG BARDA'){
+            return hero + '? I guess that hero is okay...';
+        }else if (hero.toUpperCase() === 'JEAN GREY'){
+            return hero + '? She is soooo dreamy ;)';
+        }else{
+            return hero + "? that hero is lame"; //for real tho
+        };
+    };
+    function addNums(a,b){
+        return a+b;
+    };
+    var multiply = (a,b) => a*b;
     var testVehicle = {
         type: "Sedan",
         color: "Blue"
@@ -31,4 +51,19 @@
     }else{
         console.log('only trucks allowed');
     };
+    console.log('two plus two is: ');
+    console.log(addNums(2,2));
+    console.log('pssst. if that didn\'t say four, we\'ve got problems');
+    console.log('eight times thirteen is: ');
+    console.log(multiply(8,13));
+    console.log('(hoping and praying that it showed a hundred and four...)');
+    console.log('time for heroes');
+    console.log('errbody tell me ur fav heroes!')
+    console.log(favHero('iron man'));
+    console.log(favHero('wolverine'));
+    console.log(favHero('green lantern'));
+    console.log(favHero('superman')); // wait a minute...
+    // superman, lame? BLASPHEMY!
+    console.log(favHero('big barda'));
+    console.log(favHero('jean grey'));
 </script>
