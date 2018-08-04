@@ -1,4 +1,8 @@
 <script>
+    var testVehicle = {
+        type: "Sedan",
+        color: "Blue"
+    };
     var hi = 'hello world';
     console.log(hi);
     //remember: if statements always start with if.
@@ -18,4 +22,13 @@
         console.log('Are you quite sure that that\'s really a number?');
         console.log('afaik, that\'s not a number');
     }
+    if (testVehicle.type === "Truck"){
+        if (testVehicle.color === "Red"){
+            console.log("Red Trucks go in garage one");
+        }else if (testVehicle.color === "Blue"){
+            console.log("Blue Trucks go in garage two")
+        };
+    }else{
+        console.log('only trucks allowed');
+    };
 </script>
