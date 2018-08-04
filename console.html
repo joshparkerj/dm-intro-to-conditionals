@@ -1,4 +1,7 @@
 <script>
+    var employed = (hasExperience,amountOfExperience) => {
+        return hasExperience && amountOfExperience > 5;
+    };
     function favHero(hero){
         if (hero.toUpperCase() === 'IRON MAN'){
             return hero + "? Hey, mine too!"; //rofl
@@ -66,4 +69,7 @@
     // superman, lame? BLASPHEMY!
     console.log(favHero('big barda'));
     console.log(favHero('jean grey'));
+    console.log(employed(true,0)); // how does that make sense?
+    console.log(employed(false,400)); // again... what?
+    console.log(employed(true,6)); // at last! a worker
 </script>
